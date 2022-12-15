@@ -48,30 +48,68 @@
 
 // export default Chart;
 
+//---------------------------------------------Was working
+// import React from 'react';
+// //Previously, we were using JS ES5 whereas we are using JS ES6 now - hence no module.export or require needed here.
+
+// //This is a functional component. In your function, you must return something and that something must be JSX. Can only return one single element (which can have multiple things inside of it). But, for instance, you cannot return two <div>s. But you can return a div inside of a div. You can only return a single element.
+// //Can do export function Welcome1() and then export faunction Welcome2() instead of this export default function Welcom()...(?) Not sure this is what Firmin meant. Alternative at 44:26.
+// //Can only have one default.
+
+// export default function Chart() {
+//   // All functional components must have a return method that contains JSX.
+//   // We return all the JSX inside a parent element with a className of "container".
+//   //You are giving it a class. However, typically, you would do "<div class="">". But, here, you have to give it "className". Class is already a word in JS that has meaning, so you have to use className.
+//   //Don't need <div>, could just do <> </>
+
+//   return (
+//     <div className="container">
+//       <h1>Hello students!</h1>
+//       <p>Today we will be learning about the following:</p>
+//       <ul className="parent">
+//         <li>React</li>
+//         <li>Components</li>
+//         <li>Props</li>
+//         <li>Babel</li>
+//       </ul>
+//     </div>
+//   );
+// }
+//--------------------------------------------Working
+
+// import React from 'react';
+
+// function Chart(props) {
+//   return (
+//     <form>
+//       <div className="form-group">
+//         <label htmlFor="search"></label>
+//         <input
+//           onChange={props.handleInputChange}
+//           value={props.value}
+//           name="search"
+//           type="text"
+//           className="form-control"
+//           placeholder="Select a Currency to render chart"
+//           id="search"
+//         />
+//       </div>
+//     </form>
+//   );
+// }
+
+// export default Chart;
+
+//-----------------------------------------------
 
 import React from 'react';
-//Previously, we were using JS ES5 whereas we are using JS ES6 now - hence no module.export or require needed here.
 
-//This is a functional component. In your function, you must return something and that something must be JSX. Can only return one single element (which can have multiple things inside of it). But, for instance, you cannot return two <div>s. But you can return a div inside of a div. You can only return a single element.
-//Can do export function Welcome1() and then export faunction Welcome2() instead of this export default function Welcom()...(?) Not sure this is what Firmin meant. Alternative at 44:26.
-//Can only have one default.
-
-export default function Chart() {
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
-  //You are giving it a class. However, typically, you would do "<div class="">". But, here, you have to give it "className". Class is already a word in JS that has meaning, so you have to use className.
-  //Don't need <div>, could just do <> </>
-
+function Chart(props) {
   return (
-    <div className="container">
-      <h1>Hello students!</h1>
-      <p>Today we will be learning about the following:</p>
-      <ul className="parent">
-        <li>React</li>
-        <li>Components</li>
-        <li>Props</li>
-        <li>Babel</li>
-      </ul>
-    </div>
+    <form>
+      <div id='myDiv'></div>
+    </form>
   );
 }
+
+export default Chart;
