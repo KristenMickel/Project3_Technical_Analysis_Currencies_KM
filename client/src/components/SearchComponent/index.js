@@ -8,13 +8,16 @@ import SearchForm from './SearchForm';
 import Chart from './Chart'; //I added this 12/15/22.
 import API from '../../utils/API';
 
-const CandlestickContainer = () => {
-  const [result, setResult] = useState({});
+
+//import searchCurrency from '../../utils/API'; //Added this 12/15/22.
+
+const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/22.
+  const [results, setResults] = useState({});
   const [search, setSearch] = useState('');
 
   const searchCurrency = (query) =>
     API.searchCurrency(query)
-      .then((res) => setResult(res.data))
+      .then((res) => setResults(res.data))
       .catch((err) => console.log(err));
 
   useEffect(() => {
@@ -28,9 +31,9 @@ const CandlestickContainer = () => {
     searchCurrency(search);
   };
 
-  const {
-    Title = '',
-  } = result;
+  // const {
+  //   Title = '',
+  // } = result;
 
 //   return (
 //     <Container>
@@ -68,7 +71,7 @@ return (
         </Card>
         <Card heading="Chart">
           <Chart
-            value={result}
+            results={results}
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
           />
@@ -79,4 +82,4 @@ return (
 );
 };
 
-export default CandlestickContainer;
+export default SearchCurrencyContainer;

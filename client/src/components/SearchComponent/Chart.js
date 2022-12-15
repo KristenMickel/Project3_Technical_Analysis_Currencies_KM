@@ -102,9 +102,24 @@
 
 //-----------------------------------------------
 
+// import React from 'react';
+
+// function Chart(props) {
+//   return (
+//     <form>
+//       <div id='myDiv'></div>
+//     </form>
+//   );
+// }
+
+// export default Chart;
+
 import React from 'react';
 
 function Chart(props) {
+
+  //Place functions to handle the input data for plotly here.
+
   return (
     <form>
       <div id='myDiv'></div>
