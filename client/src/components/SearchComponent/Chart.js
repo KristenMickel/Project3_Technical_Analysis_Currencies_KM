@@ -71,9 +71,17 @@ import React from 'react';
 function Chart(props) {
 
   //Place functions to handle the input data for plotly here.
-  console.log(props.results.rates)
+//console.log(props.results.rates)
 
- //const resultRates = props.results.rates
+  const resultRates = props.results.rates;
+
+  function func(){
+    const res_array = [];
+    for (let i in resultRates) {
+      res_array.push([i,resultRates[i]]);
+    };
+    console.log(res_array);
+  };
 
   return (
     <form>
