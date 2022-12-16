@@ -90,7 +90,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-info btn-block py-3" type="submit">
-                Add a currency-related comment
+                Add Comment
               </button>
             </div>
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
-    return <h3>No Comments or Trades Yet</h3>;
+    return <h3>No comments or trades yet</h3>;
   }
 
   return (
@@ -25,7 +25,7 @@ const ThoughtList = ({ thoughts, title }) => {
               className="btn btn-info btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
             >
-              Have you made similar trades?
+              Have you thought of similar trades?
             </Link>
           </div>
         ))}
@@ -34,4 +34,3 @@ const ThoughtList = ({ thoughts, title }) => {
 };
 
 export default ThoughtList;
-

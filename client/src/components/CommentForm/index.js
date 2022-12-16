@@ -41,7 +41,7 @@ const CommentForm = ({ thoughtId }) => {
 
   return (
     <div>
-      <h4>Have you made similar trades?</h4>
+      <h4>Have you had similar trading thoughts?</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -69,8 +69,8 @@ const CommentForm = ({ thoughtId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-info btn-block py-3" type="submit">
-                Comment on this user's trade
+              <button className="btn btn-info btn-block text-light py-3" type="submit">
+                Comment on this idea
               </button>
             </div>
           </form>

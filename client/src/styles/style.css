@@ -1,0 +1,11 @@
+div.card-header {
+    background-color: #1bbc9b;
+  }
+  
+  .form input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  

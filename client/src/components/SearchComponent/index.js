@@ -40,7 +40,7 @@ const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/
 return (
   <Container>
     <Row>
-      <Col size="md-4">
+      <Col size="md-12">
         <Card heading="Search">
           <SearchForm
             value={search}
