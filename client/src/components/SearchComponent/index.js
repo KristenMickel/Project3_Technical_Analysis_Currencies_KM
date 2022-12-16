@@ -15,10 +15,15 @@ import API from '../../utils/API';
 const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/22.
   const [results, setResults] = useState({});
   const [search, setSearch] = useState('');
+  const [currency, setCurrency] = useState('');
 //console.log(searchCurrency);
   const searchCurrency = (query) =>
     API.searchCurrency(query)
-      .then((res) => setResults(res.data))
+      .then((res) => { 
+        setResults(res.data);
+         setCurrency(query);
+         console.log({query})
+        })
       .catch((err) => console.log(err));
 
   useEffect(() => {
@@ -48,6 +53,7 @@ return (
             results={results}
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
+            currency={currency}
           />
         </Card>
       </Col>
