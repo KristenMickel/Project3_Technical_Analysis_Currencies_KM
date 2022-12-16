@@ -10,18 +10,19 @@ import API from '../../utils/API';
 
 
 //import searchCurrency from '../../utils/API'; //Added this 12/15/22.
+//import searchCurrency from '../../utils/SearchCurrency'; //Added this 12/15/22.
 
 const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/22.
   const [results, setResults] = useState({});
   const [search, setSearch] = useState('');
-
+//console.log(searchCurrency);
   const searchCurrency = (query) =>
     API.searchCurrency(query)
       .then((res) => setResults(res.data))
       .catch((err) => console.log(err));
 
   useEffect(() => {
-    searchCurrency('');
+    API.searchCurrency('INR');
   }, []);
 
   const handleInputChange = (e) => setSearch(e.target.value);
@@ -30,33 +31,6 @@ const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/
     e.preventDefault();
     searchCurrency(search);
   };
-
-  // const {
-  //   Title = '',
-  // } = result;
-
-//   return (
-//     <Container>
-//       <Row>
-//         <Col size="md-4">
-//           <Card heading="Search">
-//             <SearchForm
-//               value={search}
-//               handleInputChange={handleInputChange}
-//               handleFormSubmit={handleFormSubmit}
-//             />
-//             {/* Per Andres, have Chart.js here, pass it props & have UseEffect & Results before importing into Chart.js */}
-//             <Chart
-//               value={search}
-//               handleInputChange={handleInputChange}
-//               handleFormSubmit={handleFormSubmit}
-//             />
-//           </Card>
-//         </Col>
-//       </Row>
-//     </Container>
-//   );
-// };
 
 return (
   <Container>
