@@ -15,6 +15,7 @@ function SearchForm(props) {
           id="search"
         />
         <br />
+        <br />
         <button
           onClick={props.handleFormSubmit}
           className="btn btn-info"
