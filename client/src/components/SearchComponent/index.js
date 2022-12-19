@@ -5,19 +5,16 @@ import Row from './Row';
 import Col from './Col';
 import Card from './Card';
 import SearchForm from './SearchForm';
-import Chart from './Chart'; //I added this 12/15/22.
+import Chart from './Chart'; 
 import API from '../../utils/API';
 
 //Make sure to import in the client folder: npm install react-plotly.js plotly.js
 
-//import searchCurrency from '../../utils/API'; //Added this 12/15/22.
-//import searchCurrency from '../../utils/SearchCurrency'; //Added this 12/15/22.
-
-const SearchCurrencyContainer = () => {   //Changed the name of this this 12/15/22.
+const SearchCurrencyContainer = () => {   
   const [results, setResults] = useState({});
   const [search, setSearch] = useState('');
   const [currency, setCurrency] = useState('');
-//console.log(searchCurrency);
+
   const searchCurrency = (query) =>
     API.searchCurrency(query)
       .then((res) => { 

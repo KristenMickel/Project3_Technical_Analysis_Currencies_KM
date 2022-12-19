@@ -7,11 +7,6 @@ import SearchComponent from '../components/SearchComponent';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
 
-/** 
- * 
- * [graph | comments]
- */
-
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];

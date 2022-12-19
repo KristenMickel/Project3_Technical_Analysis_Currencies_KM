@@ -1,4 +1,3 @@
-//import React, { useState } from 'react';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -9,10 +8,6 @@ import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
-
-//------Added
-//import API from '../../utils/API';
-//-------------------
 
 const ThoughtForm = () => {
 
